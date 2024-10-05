@@ -17,21 +17,21 @@ displayModal();
 // Recuperation de de l'élément <span> qui ouvre la modale
 let span = document.getElementsByClassName("close")[0];
 
-//  <span> (x), close the modal
+// Lorsque l'utilisateur clique sur le <span> (x), la modale se ferme
 span.onclick = function() {
   modal.style.display = "none";
   let htmlNoScroll = document.querySelector('html')
   htmlNoScroll.setAttribute('style', 'overflow: none')
 }
 
-// generate the images cards
+// Génère les images
 let modGal = document.querySelector('.galleryPrev')
 async function worksDataModal() {
     try {
     const res = await fetch('http://localhost:5678/api/works')
     let data = await res.json();
 
-    //create elements using the fetched data
+    //création des élemesnt suite à la récupération des données
     for (let i = 0; i < data.length; i++) {
         let imgCard = document.createElement("div");
         imgCard.classList.add('imgCard')
