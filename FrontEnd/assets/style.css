@@ -1,0 +1,523 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, .categories {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color: #fffef8;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	color: #B1663C;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+#modal--black .projectsMod {
+    width: 100%;
+    height: 4em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-color: black;
+}
+#modal--black .modaltopContent{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	color: white;
+}
+#modal--black .modaltopContent i{
+	font-size: 16px;
+}
+#modal--black button{
+	color: black;
+    background-color: white;
+    margin: auto;
+    width: 180px;
+    height: 39px;
+    text-align: center;
+    border-radius: 60px;
+	font-weight: 600;
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#introduction .projectsMod {
+	display: flex;
+	justify-content: flex-start;
+	align-items: baseline;
+	gap: 5px;
+	padding: 5px 55px;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+#portfolio .projectsMod{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2em;
+	gap: 5px;
+}
+.projects{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+#modal .projectsMod{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2em;
+	gap: 5px;
+}
+.imgMod{
+	display: flex;
+	justify-content: flex-start;
+	align-items: baseline;
+	gap: 5px;
+	padding: 5px 55px;
+}
+.categories {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 500px;
+	height: 100px;
+	margin: -2em auto auto auto;
+
+}
+.categoriesTab {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px solid #1D6154;
+	border-radius: 50px;
+	font-weight: bold;
+}
+
+.selected {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px solid #1D6154;
+	border-radius: 50px;
+	font-weight: bold;
+	color: white;
+	background-color: #1D6154 ;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+	margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+/** login css **/
+
+#login {
+	width: 50%;
+	margin: auto;
+}
+#login > * {
+	text-align: center;
+}
+#login h2{
+	margin-bottom: 20px;
+}
+#login form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+	color: #B1663C;
+}
+#login p{
+	text-align: center;
+	border-bottom: 1px solid;
+	width: 10em;
+	margin: auto;
+	color: #B1663C;
+}
+#login input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#login [type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	height: 3em;
+	text-align: center;
+	border-radius: 60px ;
+}
+#login label {
+	margin: 2em 0 1em 0;
+}
+#login textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.errorMsg{
+	font-size: 18px;
+	border-bottom: none!important;
+	padding-top: 1em;
+	width: 12em!important;
+	color: red!important;
+}
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	height: 3em;
+	text-align: center;
+	border-radius: 60px ;
+}
+footer {
+	background-color: white;
+	margin: auto;
+}
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 1em;
+	padding-top: 1em;
+}
+
+#loginPage {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+/** modal css **/
+#mainModal h2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal {
+display: none;
+position: fixed; 
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%; 
+height: 100%; 
+overflow: auto; 
+background-color: rgb(0,0,0); 
+background-color: rgba(0,0,0,0.4); 
+}
+.modal-background {
+background-color: #fefefe;
+margin: 7vh auto; 
+padding: 20px;
+border: 1px solid #888;
+width: 47em;
+}
+.solidModal {
+	width: 80%;
+	border-top: 3px solid #bbb;
+}
+.modalContent {
+	display: visible;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#mainModal inputinput[type="submit"]{
+    margin: 1em auto;
+    height: 35px;
+}
+#deleteAll{
+	color: red;
+	border-bottom: 1px solid;
+}
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+/** for the image cards preview **/
+.galleryPrev {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 72%;
+    padding: 50px;
+    gap: 13px;
+}
+.imgCard {
+    height: 120px;
+    width: 80px;
+}
+#mainModal img{
+	width: 100%;
+}
+.trashIcon {
+	position: absolute;
+	margin-left: 60px;
+    margin-top: 8px;
+	color: black!important;
+	border-bottom: none!important;
+}
+/** css for the addition of content **/
+.newModalContent {
+	display: none!important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 3em;
+}
+.imgBackground{
+    justify-content: center;
+    align-items: center;
+	width: 35em;
+    height: 19em;
+	background: #E8F1F7;
+	border-radius: 1%;	
+}
+.newImgDisplay{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	margin: auto;
+}
+.newImg {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 35em;
+}
+.categorySelect {
+	position: relative;
+	font-family: Arial;
+	width: 80%;
+}
+
+.categorySelect select {
+display: none; 
+}
+.fa-image{
+	font-size: 5em;
+}
+.fa-arrow-left{
+	display: none;
+	font-size: 21px;
+	color: #aaa;
+	padding-left: 5px;
+}
+input[type="file"]{
+	opacity: 0;
+	z-index: -1;
+	position: absolute;
+}
+#addImageLabel {
+	font-family: 'Syne';
+    color: #306685;
+    background-color: #CBD6DC;
+    margin: 1em;
+    padding-top: 18px;
+    width: 16em;
+    font-size: 16px;
+    height: 2em;
+    text-align: center;
+    border-radius: 60px;
+}
+#newModalContent input[type=text], select {
+    padding: 20px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.1);
+}
+#newModalContent button{
+	font-family: 'Syne';
+    color: white;
+    background-color: grey;
+    margin: 1em auto;
+    border: none;
+    width: 16em;
+    font-size: 16px;
+    height: 3em;
+    text-align: center;
+    border-radius: 60px;
+}
+#newModalContent button:hover{
+	background-color: #1D6154;
+}
+#preview{
+	width: 200px;
+	display: inline-block;
+}
+#preview img{
+	width: 100%;
+}
