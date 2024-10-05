@@ -1,6 +1,6 @@
 let modal = document.getElementById('mainModal')
 
-// Get the input that opens the modal
+// Recupération de l'input qui ouvre la modale
 
 function displayModal () {
     for (let i = 0; i < inputAll.length; i++){
@@ -24,7 +24,7 @@ span.onclick = function() {
   htmlNoScroll.setAttribute('style', 'overflow: none')
 }
 
-// generate the images cards 
+// generate the images cards
 let modGal = document.querySelector('.galleryPrev')
 async function worksDataModal() {
     try {
@@ -35,7 +35,7 @@ async function worksDataModal() {
     for (let i = 0; i < data.length; i++) {
         let imgCard = document.createElement("div");
         imgCard.classList.add('imgCard')
-        modGal.append(imgCard)   
+        modGal.append(imgCard)
 
         //create image with attributes
         let dataImg = document.createElement("img");
@@ -45,7 +45,7 @@ async function worksDataModal() {
         //create edit text
         let editTxt = document.createElement("p")
         editTxt.innerHTML = "Editer"
-        
+
         // create trash icon
         let trashIcon = document.createElement("p")
         trashIcon.innerHTML = "<i class=\"fa-solid fa-trash\"></i>"
@@ -58,10 +58,10 @@ async function worksDataModal() {
         imgCard.append(dataImg)
         imgCard.append(editTxt)
 
-        //delete items 
+        //delete items
         let imgCardRemover = document.querySelectorAll('.imgCard')
         let imgCards = document.querySelectorAll('.trashIcon')
-        
+
         for (let i = 0; i < imgCards.length; i++){
             imgCards[i].addEventListener('click', async event =>{
                 try {
@@ -115,7 +115,7 @@ let imgPreview = document.querySelector('.imgBackground')
 let imghandler = document.querySelector('input[name=addImage]')
 
 imghandler.addEventListener('change', event =>{
-  
+
     for (let i = 0; i < imghandler.files.length; i++) {
         let file = imghandler.files[i]
 
@@ -127,21 +127,21 @@ imghandler.addEventListener('change', event =>{
       preview.appendChild(img)
       let reader = new FileReader()
 
-      reader.onload = ( function(aImg) { 
-      return function(e) { 
-      aImg.src = e.target.result; 
+      reader.onload = ( function(aImg) {
+      return function(e) {
+      aImg.src = e.target.result;
     }
    })(img);
- 
+
   reader.readAsDataURL(file);
     }})
-// add new image 
+// add new image
   let newImg = document.getElementById('validateButton')
   let form1  = document.getElementById('newModalContent')
 
   form1.addEventListener('submit', async event  =>{
   event.preventDefault()
-  
+
   for (let i = 0; i < imghandler.files.length; i++) {
   let title = document.getElementById('title').value
   let category = document.getElementById('category-select').value
@@ -151,7 +151,7 @@ imghandler.addEventListener('change', event =>{
     formData.append('title', title)
     formData.append('category', category)
 
-    try {   
+    try {
     let response = await fetch('http://localhost:5678/api/works', {
       method: 'POST',
       headers: {
