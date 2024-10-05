@@ -14,10 +14,10 @@ function displayModal () {
 }};
 displayModal();
 
-// Get the <span> element that closes the modal
+// Recuperation de de l'élément <span> qui ouvre la modale
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
+//  <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
   let htmlNoScroll = document.querySelector('html')
