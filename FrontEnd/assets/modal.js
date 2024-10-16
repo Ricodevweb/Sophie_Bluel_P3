@@ -31,7 +31,7 @@ async function worksDataModal() {
     const res = await fetch('http://localhost:5678/api/works')
     let data = await res.json();
 
-    //création des élemesnt suite à la récupération des données
+    //création des élements suite à la récupération des données
     for (let i = 0; i < data.length; i++) {
         let imgCard = document.createElement("div");
         imgCard.classList.add('imgCard')
@@ -44,7 +44,7 @@ async function worksDataModal() {
 
         //create edit text
         let editTxt = document.createElement("p")
-        editTxt.innerHTML = "Editer"
+        //editTxt.innerHTML = "Editer"
 
         // create trash icon
         let trashIcon = document.createElement("p")

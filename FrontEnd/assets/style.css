@@ -355,19 +355,19 @@ footer nav ul {
 }
 .modal {
 display: none;
-position: fixed; 
+position: fixed;
 z-index: 1;
 left: 0;
 top: 0;
-width: 100%; 
-height: 100%; 
-overflow: auto; 
-background-color: rgb(0,0,0); 
-background-color: rgba(0,0,0,0.4); 
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.4);
 }
 .modal-background {
 background-color: #fefefe;
-margin: 7vh auto; 
+margin: 7vh auto;
 padding: 20px;
 border: 1px solid #888;
 width: 47em;
@@ -423,7 +423,9 @@ cursor: pointer;
 	position: absolute;
 	margin-left: 60px;
     margin-top: 8px;
-	color: black!important;
+	color: white!important;
+	background-color: black;
+	padding: 3px;
 	border-bottom: none!important;
 }
 /** css for the addition of content **/
@@ -441,7 +443,7 @@ cursor: pointer;
 	width: 35em;
     height: 19em;
 	background: #E8F1F7;
-	border-radius: 1%;	
+	border-radius: 1%;
 }
 .newImgDisplay{
 	display: flex;
@@ -464,7 +466,7 @@ cursor: pointer;
 }
 
 .categorySelect select {
-display: none; 
+display: none;
 }
 .fa-image{
 	font-size: 5em;
