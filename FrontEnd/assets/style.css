@@ -211,6 +211,11 @@ li:hover {
 	font-weight: bold;
 }
 
+/* Couleur du texte pour les catégories */
+.categoriesTab {
+    color: #1D6154; /* Vert foncé */
+}
+
 .selected {
 	padding-top: 12px;
 	padding-bottom: 12px;
@@ -353,6 +358,11 @@ footer nav ul {
 	justify-content: center;
 	align-items: center;
 }
+
+.modal-title {
+    color: black; /* Changer la couleur en noir */
+}
+
 .modal {
 display: none;
 position: fixed;

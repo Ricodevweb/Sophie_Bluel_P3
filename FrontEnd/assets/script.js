@@ -24,25 +24,25 @@ if (localStorage.token){
 }};
 hideModal();
 
-// get the gallery class 
+// get the gallery class
 let gallery = document.querySelector(".gallery");
 
-//create selectable categories 
+//create selectable categories
 let categories = document.querySelector(".categories");
 let categoriesSelected = document.querySelector(".categories selected");
 
 const galleryCat = [
     {
-		"id":"tot", "name":"Tout"
+		"id":"tot", "name":"Tous"
 	},
     {
 		"id":"obj", "name":"Objets"
 	},
     {
-        "id":"app", "name":"Appartments"
+        "id":"app", "name":"Appartements"
     },
     {
-        "id":"hot", "name":"Hôtels & restaurants"
+        "id":"hot", "name":"Hotels & restaurants"
     }
 ]
 
@@ -69,7 +69,7 @@ async function worksData() {
         let newFigure = document.createElement("figure");
         newFigure.classList.add('main-content')
         newFigure.setAttribute('categoryId', data[i].categoryId);
-        gallery.append(newFigure)   
+        gallery.append(newFigure)
 
         //create image with attributes
         let dataImg = document.createElement("img");
@@ -77,7 +77,7 @@ async function worksData() {
         dataImg.setAttribute('title', data[i].title);
         dataImg.src = data[i].imageUrl;
         dataImg.id = data[i].id;
-        
+
         //create captation and content
         let figCap = document.createElement("figcaption");
         let figCapData = document.createElement("figcaptionData").innerHTML = data[i].title;
@@ -99,7 +99,7 @@ function removeClass () {
 
     for (let g = 0; g < categoriesTab.length; g++){
         let catid = categoriesTab[g].id
-    
+
         categoriesTab.forEach((categoriesTab) => {
             categoriesTab.classList.remove('selected')
         })
@@ -144,7 +144,7 @@ let cat = document.querySelectorAll('figure[categoryId="1"]')
 function objCat (){
     let allCat = document.querySelectorAll('figure[categoryId]')
     let cat = document.querySelectorAll('figure[categoryId="1"]')
-    
+
 // pour chaque figure, vérifier l'attribut categoryId et la comparée avec une valeur
 for (let i = 0; i < allCat.length; i++){
     let catId = cat.item(1).getAttribute("categoryId");
@@ -192,7 +192,7 @@ hotSelect.addEventListener('click', () => {
 function hotCat(){
     let allCat = document.querySelectorAll('figure[categoryId]')
     let cat = document.querySelectorAll('figure[categoryId="3"]')
-    
+
 for (let i = 0; i < allCat.length; i++){
     let catId = cat.item(1).getAttribute("categoryId");
     let allCatId = allCat.item(i).getAttribute("categoryId");
