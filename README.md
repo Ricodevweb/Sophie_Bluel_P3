@@ -8,7 +8,7 @@ Ce projet consiste à créer la partie dynamique du site d'une architecte d'int�
 
 ## Contenu du projet
 
-Vous y trouvez tout simplement : 
+Vous y trouvez tout simplement :
 
 * Un fichier index.html avec l'ensemble du code HTML
 * Un dossier nommé css contenant le fichier style.css avec tout le contenu du CSS de la page
@@ -18,8 +18,3 @@ Vous y trouvez tout simplement :
 
 Validation CSS : Aucune erreur ;
 Validation HTML : Présence de deux role="dialog" sur des modales relevée. Ils sont laissés à des fins d'accessibilité, certains lecteurs d'écran bas de gamme ne voyant pas les balises de la modal mais lisant le role.
-
-## Auteur
-
-- [@Nomera67](https://github.com/Nomera67)
-/
