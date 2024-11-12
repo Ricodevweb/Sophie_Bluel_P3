@@ -12,9 +12,4 @@ Vous y trouvez tout simplement :
 
 * Un fichier index.html avec l'ensemble du code HTML
 * Un dossier nommé css contenant le fichier style.css avec tout le contenu du CSS de la page
-* Un fichier app.js contenant le JavaScript lié à ce site
-
-## Passage au W3C
-
-Validation CSS : Aucune erreur ;
-Validation HTML : Présence de deux role="dialog" sur des modales relevée. Ils sont laissés à des fins d'accessibilité, certains lecteurs d'écran bas de gamme ne voyant pas les balises de la modal mais lisant le role.
+* Un fichier app.js contenant le JavaScript lié à ce site.
