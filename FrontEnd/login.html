@@ -1,50 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+	<!-- Déclaration du jeu de caractères en UTF-8 pour assurer une bonne compatibilité -->
 	<meta charset="UTF-8">
+	<!-- Titre de la page qui s'affiche dans l'onglet du navigateur -->
 	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<!-- Définition du viewport pour une adaptation responsive sur différents écrans -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Pré-connexion aux serveurs de Google Fonts pour optimiser le chargement des polices -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- Lien vers les polices de caractères utilisées dans le site -->
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<!-- Balise meta pour fournir une description de la page aux moteurs de recherche -->
 	<meta name="description" content="">
+	<!-- Lien vers la feuille de style CSS principale du site -->
 	<link rel="stylesheet" href="./assets/style.css">
-	<script src="./assets/login.js" defer></script>
+	<!-- Inclusion du fichier JavaScript avec type "module" pour l'utilisation des modules ECMAScript -->
+	<script src="./login.js" type="module"></script>
 </head>
 <body>
-<header>
-	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
-	<nav>
-		<ul>
-			<li>projets</li>
-			<li>contact</li>
-			<li>login</li>
-			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
-		</ul>
-	</nav>
-</header>
-<main>
+	<!-- Conteneur principal de la page -->
+	<div class="main-container">
+		<!-- En-tête de la page avec le nom et le menu de navigation -->
+		<header>
+			<!-- Titre principal de la page, nom de l'architecte avec une description complémentaire -->
+			<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+			<nav>
+				<!-- Liste de navigation contenant des liens vers différentes sections de la page -->
+				<ul>
+					<li><a href="./index.html">projets</a></li>
+					<li>contact</li>
+					<li><a href="./login.html">login</a></li>
+					<!-- Icône vers le profil Instagram de l'architecte -->
+					<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+				</ul>
+			</nav>
+		</header>
 
-    <section id="login">
-        <h2>Login</h2>
-        <form>
-            <label for="email">E-mail</label>
-            <input type="text" name="email" id="email" required>
-            <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" required>
-            <input type="submit" value="Se connecter" id="submit">
-            <p>Mot de passe oublié</p>
-			<p class="errorMsg"></p>
-        </form>
-    </section>
-</main>
-<footer id="loginPage">
-	<nav>
-		<ul>
-			<li>Mentions Légales</li>
-		</ul>
-	</nav>
-</footer>
+		<!-- Section principale dédiée au formulaire de connexion -->
+		<main class="login-main">
+			<!-- Conteneur du formulaire de connexion -->
+			<div class="login-container">
+				<h2>Log In</h2>
+				<!-- Formulaire de connexion avec méthode POST pour envoyer les informations de connexion -->
+				<form action="login.html" method="post" id="loginform" class="login-form">
+					<!-- Section pour la saisie de l'e-mail -->
+					<div class="login-sections">
+						<label for="email" class="login-label">E-mail</label>
+						<input type="email" id="email" name="email" required class="login-input">
+					</div>
+					<!-- Section pour la saisie du mot de passe -->
+					<div class="login-sections">
+						<label for="password" class="login-label">Mot de passe</label>
+						<input type="password" id="password" name="password" required class="login-input">
+					</div>
+					<!-- Boutons de soumission et de récupération de mot de passe -->
+					<div class="login-buttons">
+						<input type="submit" value="Se connecter" id="login-connect">
+						<input type="button" value="Mot de passe oublié" id="login-remember">
+					</div>
+				</form>
+			</div>
+			<!-- Zone d'affichage des erreurs de connexion, si elles existent -->
+			<div class="login-error" id="login-error"></div>
+		</main>
 
+		<!-- Pied de page contenant le lien vers les mentions légales -->
+		<footer class="login-footer">
+			<nav>
+				<ul>
+					<li>Mentions Légales</li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
 </body>
 </html>
