@@ -3,6 +3,9 @@
    License: none (public domain)
 */
 
+/* Réinitialisation CSS par Eric Meyer : ce code supprime les marges,
+les bordures et autres styles par défaut des éléments pour
+avoir un rendu plus homogène entre navigateurs */
 *{
 	box-sizing: border-box;
 }
@@ -27,7 +30,8 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+/* Les balises HTML5 sont définies comme "block"
+pour une meilleure compatibilité sur les anciens navigateurs */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -35,9 +39,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+/* Suppression des puces par défaut pour les listes non ordonnées */
 ol, ul {
 	list-style: none;
 }
+/* Retire les guillemets automatiques pour les éléments blockquote et q */
 blockquote, q {
 	quotes: none;
 }
@@ -46,31 +52,31 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+/* Réinitialisation pour les tables */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/** end reset css**/
+/** Fin de la réinitialisation CSS **/
 
+/** Variables CSS **/
 
-/** Variables **/
-
-:root{
-	--green-color: #1D6154;
-	--orange-color: #B1663C;
-	--disabled-button: #A7A7A7;
-	--label-color: #3D3D3D;
-	--dark-color: #000000;
-	--white-color: #FFFFFF;
-	--shadow-color: #00000017;
-	--submit-color: #E8F1F6;
-	--text-submit-color: #306685;
-	--login-color: #3D3D3D;
-	--border-color: #B3B3B3;
-	--submit-label-color: #CBD6DC;
+:root {
+	--green-color: #1D6154; /* Couleur verte utilisée pour les éléments principaux */
+	--orange-color: #B1663C; /* Couleur orange pour des accents */
+	--disabled-button: #A7A7A7; /* Couleur pour boutons désactivés */
+	--label-color: #3D3D3D; /* Couleur des étiquettes de formulaire */
+	--dark-color: #000000; /* Couleur noire */
+	--white-color: #FFFFFF; /* Couleur blanche */
+	--shadow-color: #00000017; /* Couleur pour ombrage */
+	--submit-color: #E8F1F6; /* Couleur de fond pour les boutons de soumission */
+	--text-submit-color: #306685; /* Couleur pour le texte sur fond clair */
+	--login-color: #3D3D3D; /* Couleur pour le texte de connexion */
+	--border-color: #B3B3B3; /* Couleur des bordures */
+	--submit-label-color: #CBD6DC; /* Couleur pour les étiquettes de soumission */
 }
 
-/** DRY (too much) CSS **/
+/** Styles communs réutilisés pour DRY **/
 
 h1, #portfolio, .gallery figure, #contact form,
 .login-container, .login-sections, .login-form, .login-buttons, #login-form,
@@ -79,29 +85,31 @@ h1, #portfolio, .gallery figure, #contact form,
 	flex-direction: column;
 }
 
-
+/* Centrage principal de la page */
 .main-container {
 	max-width: 1140px;
 	margin: 0 auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
 }
+/* Entête avec deux éléments espacés */
 header {
 	display: flex;
 	justify-content: space-between;
 	margin: 50px 0
 }
+/* Style pour les sections de contenu */
 section {
 	margin: 50px 0
 }
-
+/* Styles pour le titre principal (h1) */
 h1{
 	font-family: 'Syne';
 	font-size: 22px;
 	font-weight: 800;
 	color: var(--orange-color);
 }
-
+/* Style pour les sous-titres dans h1 */
 h1 > span {
 	font-family: 'Work Sans';
 	font-size:10px;
@@ -115,6 +123,7 @@ h2{
 	font-size: 30px;
 	color: var(--green-color);
 }
+/* Styles pour le menu de navigation */
 nav ul {
 	display: flex;
 	align-items: center;
@@ -135,6 +144,7 @@ li:hover, a:hover {
 	color: var(--orange-color);
 }
 
+/* Alignement des éléments dans la section d'introduction */
 #introduction {
 	display: flex;
 	align-items: center;
@@ -553,3 +563,8 @@ dialog::backdrop{
 .portfolio-title{
 	position: relative;
 }
+
+ChatGPT a dit :
+ChatGPT
+css
+Copier le code
