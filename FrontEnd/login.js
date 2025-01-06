@@ -1,5 +1,3 @@
-const urlApi = "http://localhost:5678/api/"; // URL de l'API pour accéder aux données du serveur
-const bearerAuth = window.localStorage.getItem("BearerAuth"); // Récupération du token d'authentification stocké dans le navigateur
 const loginForm = document.querySelector("form"); // Sélection du formulaire de connexion dans le document HTML
 
 // Ajout d'un écouteur d'événement pour la soumission du formulaire de connexion
@@ -23,7 +21,7 @@ loginForm.addEventListener("submit", async function (event) {
   const loginData = JSON.stringify(loginFormDatas);
 
   // Envoi des informations de connexion via une requête POST à l'API
-  await fetch(urlApi + "users/login", {
+  await fetch("http://localhost:5678/api/users/login", {
     method: "POST", // Méthode HTTP utilisée pour l'envoi des données
     headers: {
       "Content-Type": "application/json", // Indique que les données envoyées sont au format JSON
